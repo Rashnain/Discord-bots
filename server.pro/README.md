@@ -4,7 +4,7 @@ This bot allows admins of a Server.pro free server (NB: it has only been tested 
 
 ### Dependencies
 
-You can install the needed packages by doing `pip install -r req.txt`.
+You can install the needed packages by doing `pip install -r requirements.txt`.
 
 It depends on Firefox and its driver, which can be found [here](https://www.mozilla.org/firefox/all/) and [there](https://github.com/mozilla/geckodriver/releases) respectively.
 

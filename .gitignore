@@ -1,0 +1,11 @@
+### IntelliJ IDEA ###
+.idea/
+
+### Selenium ###
+geckodriver.*
+
+### server.pro ###
+captcha.png
+
+### Secrets ###
+.env

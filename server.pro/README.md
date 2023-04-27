@@ -6,7 +6,7 @@ This bot allows admins of a Server.pro free server (NB: it has only been tested 
 
 You can install the needed packages by doing `pip install -r req.txt`.
 
-It depends on Firefox geckodriver, which can be found [here](https://github.com/mozilla/geckodriver/releases).
+It depends on Firefox and its driver, which can be found [here](https://www.mozilla.org/firefox/all/) and [there](https://github.com/mozilla/geckodriver/releases) respectively.
 
 You will need to extract the archive and put the driver in the same folder as `main.py`.
 

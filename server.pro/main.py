@@ -17,7 +17,7 @@ from selenium.webdriver.firefox.options import Options
 
 config = dotenv_values('.env')
 
-bot = discord.Bot(owner_id=int(config['OWNER_ID']))
+bot = discord.Bot(owner_id=int(config['DISCORD_OWNER_ID']))
 
 
 async def slow_type(element, text: str, delay: int | float = 0.0):
@@ -47,12 +47,12 @@ async def login():
     await log('login page', .1)
     # Email
     email = driver.find_element(By.ID, 'input-email')
-    await slow_type(email, username)
+    await slow_type(email, config['SERVER_PRO_EMAIL'])
     email.send_keys(Keys.TAB)
     await log('email', .1)
     # Password
     pswd = driver.find_element(By.ID, 'input-password')
-    await slow_type(pswd, password)
+    await slow_type(pswd, config['SERVER_PRO_PWD'])
     await log('password', .1)
     # Validating
     driver.find_element(By.CSS_SELECTOR, 'button.button-primary').send_keys(Keys.SPACE)
@@ -262,7 +262,7 @@ async def on_ready():
     # Change status
     await change_status('booting', Status.dnd)
     # Channel where captcha ar sent to
-    bot.channel = bot.get_channel(int(config['CAPTCHA_CHANNEL']))
+    bot.channel = bot.get_channel(int(config['DISCORD_CAPTCHA_CHANNEL']))
     # Connection
     await login()
 
@@ -409,12 +409,6 @@ if __name__ == '__main__':
     bot.renew_link = None
     bot.consolable = False
     bot.channel = None
-    # Token
-    token = config['BOT_TOKEN']
-    # Login
-    username = config['SERVER_PRO_EMAIL']
-    # Password
-    password = config['SERVER_PRO_PWD']
     # Driver
     options = Options()
     options.add_argument('-headless')
@@ -423,5 +417,5 @@ if __name__ == '__main__':
         driver.set_window_position(0, 0)
         driver.set_window_size(950, 520)
     # Starting/stoping
-    bot.run(token)
+    bot.run(config['DISCORD_BOT_TOKEN'])
     driver.quit()

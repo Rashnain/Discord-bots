@@ -14,9 +14,9 @@ You will need to extract the archive and put the driver in the same folder as `m
 
 You will have to write 5 secrets in the `.env` file :
 
-* The Discord user ID of the person who will have the right to shutdown the bot and send commands (`OWNER_ID`)
-* The Discord channel ID of the channel where the captchas will be sent (`CAPTCHA_CHANNEL`)
-* The bot token, which can be found on your bot [dashboard](https://discord.com/developers/applications) (`BOT_TOKEN`)
+* The Discord user ID of the person who will have the right to shutdown the bot and send commands (`DISCORD_OWNER_ID`)
+* The Discord channel ID of the channel where the captchas will be sent (`DISCORD_CAPTCHA_CHANNEL`)
+* The Discord bot token, which can be found on your bot [dashboard](https://discord.com/developers/applications) (`DISCORD_BOT_TOKEN`)
 * The email used to login to your Server.pro account (`SERVER_PRO_EMAIL`)
 * The password used to login to your Server.pro account (`SERVER_PRO_PWD`)
 

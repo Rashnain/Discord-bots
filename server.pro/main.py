@@ -258,7 +258,7 @@ async def expire_check():
 
 @bot.event
 async def on_ready():
-    print('Connected has', bot.user)
+    print('Bot ready, logged as', bot.user)
     # Change status
     await change_status('booting', Status.dnd)
     # Channel where captcha ar sent to

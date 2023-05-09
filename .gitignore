@@ -1,11 +1,18 @@
 ### IntelliJ IDEA ###
 .idea/
 
+### Python ###
+__pycache__
+
 ### Selenium ###
 geckodriver.*
 
 ### server.pro ###
 captcha.png
+
+### twitch ###
+channels.json
+followers.json
 
 ### Secrets ###
 .env

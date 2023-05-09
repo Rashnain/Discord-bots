@@ -9,3 +9,7 @@ updates:
     directory: "/server.pro/"
     schedule:
       interval: "monthly"
+  - package-ecosystem: "pip"
+    directory: "/twitch/"
+    schedule:
+      interval: "monthly"

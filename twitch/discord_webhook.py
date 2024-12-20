@@ -64,7 +64,7 @@ class Webhook:
 
 		webhook_info = self.__session.get(self.__url).json()
 
-		assert len(webhook_info.items()) == 10, 'The given ID/token is wrong.'
+		assert len(webhook_info.items()) == 9, 'The given ID/token is wrong.'
 
 		self.type = webhook_info['type']
 		self.id = webhook_info['id']
